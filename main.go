@@ -6,7 +6,6 @@ import (
 	"github.com/ViRb3/wgcf/config"
 	"github.com/ViRb3/wgcf/wireguard"
 	"github.com/pkg/errors"
-	"github.com/spf13/viper"
 	"log"
 	"net/http"
 )
@@ -91,7 +90,7 @@ func generateProfile(ctx *config.Context) (string, error) {
 	}
 
 	profile, err := wireguard.NewProfile(&wireguard.ProfileData{
-		PrivateKey: viper.GetString(config.PrivateKey),
+		PrivateKey: ctx.PrivateKey,
 		Address1:   thisDevice.Config.Interface.Addresses.V4,
 		Address2:   thisDevice.Config.Interface.Addresses.V6,
 		PublicKey:  thisDevice.Config.Peers[0].PublicKey,

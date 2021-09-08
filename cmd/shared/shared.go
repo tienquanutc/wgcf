@@ -2,7 +2,6 @@ package shared
 
 import (
 	"fmt"
-	"log"
 	"math"
 	"strings"
 
@@ -56,15 +55,15 @@ func F32ToHumanReadable(number float32) string {
 }
 
 func PrintDeviceData(thisDevice *cloudflare.Device, boundDevice *cloudflare.BoundDevice) {
-	log.Println("=======================================")
-	log.Printf("%-13s : %s\n", "Device name", *boundDevice.Name)
-	log.Printf("%-13s : %s\n", "Device model", thisDevice.Model)
-	log.Printf("%-13s : %t\n", "Device active", boundDevice.Active)
-	log.Printf("%-13s : %s\n", "Account type", thisDevice.Account.AccountType)
-	log.Printf("%-13s : %s\n", "Role", thisDevice.Account.Role)
-	log.Printf("%-13s : %s\n", "Premium data", F32ToHumanReadable(thisDevice.Account.PremiumData))
-	log.Printf("%-13s : %s\n", "Quota", F32ToHumanReadable(thisDevice.Account.Quota))
-	log.Println("=======================================")
+	//log.Println("=======================================")
+	//log.Printf("%-13s : %s\n", "Device name", *boundDevice.Name)
+	//log.Printf("%-13s : %s\n", "Device model", thisDevice.Model)
+	//log.Printf("%-13s : %t\n", "Device active", boundDevice.Active)
+	//log.Printf("%-13s : %s\n", "Account type", thisDevice.Account.AccountType)
+	//log.Printf("%-13s : %s\n", "Role", thisDevice.Account.Role)
+	//log.Printf("%-13s : %s\n", "Premium data", F32ToHumanReadable(thisDevice.Account.PremiumData))
+	//log.Printf("%-13s : %s\n", "Quota", F32ToHumanReadable(thisDevice.Account.Quota))
+	//log.Println("=======================================")
 }
 
 // changing the bound account (e.g. changing license key) will reset the device name
